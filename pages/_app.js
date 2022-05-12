@@ -1,11 +1,14 @@
 import "../styles/globals.css"
 import Navbar from "../components/Navbar"
+import { AnimatePresence } from "framer-motion"
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
       <Navbar />
-      <Component {...pageProps} />
+      <AnimatePresence exitBeforeEnter initial={false}>
+        <Component {...pageProps} />
+      </AnimatePresence>
     </>
   )
 }

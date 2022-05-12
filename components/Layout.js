@@ -5,11 +5,6 @@ const Meta = ({ title, description, keywords }) => (
   <Head>
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
-    <link rel="stylesheet" href="https://unpkg.com/open-props" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/open-props/normalize.min.css"
-    />
     <title>{title}</title>
   </Head>
 )
@@ -22,9 +17,9 @@ Meta.defaultProps = {
 
 const Layout = ({ title, description, keywords, children, direction }) => {
   const variants = {
-    hidden: { opacity: 0, y: "-10px" },
-    enter: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: "10px" },
+    hidden: { opacity: 0, x: "-10px" },
+    enter: { opacity: 1, x: 0 },
+    exit: { opacity: 0, x: "100%" },
   }
   const variantsLeft = {
     hidden: { y: 0, x: "100%" },
@@ -34,16 +29,18 @@ const Layout = ({ title, description, keywords, children, direction }) => {
   return (
     <>
       <Meta title={title} description={description} keywords={keywords} />
-      <motion.main
-        initial="hidden"
-        animate="enter"
-        exit="exit"
-        variants={direction ? variantsLeft : variants}
-        transition={{ type: "linear", duration: 0.25 }}
-        className="flex flex-col gap-12 "
-      >
-        {children}
-      </motion.main>
+      <div>
+        <motion.main
+          initial="hidden"
+          animate="enter"
+          exit="exit"
+          variants={variants}
+          transition={{ type: "linear", stiffness: 600, duration: 0.5, delay: 0.1 }}
+          className="flex flex-col gap-12 overflow-x-hidden"
+        >
+          {children}
+        </motion.main>
+      </div>
     </>
   )
 }
