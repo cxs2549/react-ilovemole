@@ -1,9 +1,14 @@
+@import "react-slideshow-image/dist/styles.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  font-family: 'apple-system', 'BlinkMacSystemFont', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "apple-system", "BlinkMacSystemFont", "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  height: 200vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .no-flow {
@@ -13,14 +18,35 @@ body {
 h1 {
   font-size: 2.5rem;
   letter-spacing: -0.04em;
-  line-height: .93;
+  line-height: 0.93;
+}
+
+h2 {
+  font-size: 1.75rem;
+  letter-spacing: -0.04em;
+  line-height: 0.93;
+}
+
+p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: -0.014em;
+  line-height: 1.5;
 }
 
 span {
-  font-size: 1.4rem;
-  font-weight: 500;
-  letter-spacing: -0.008em;
-  line-height: 1;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  letter-spacing: 0.4px;
+  line-height: 1.6em;
+  color: rgba(69, 69, 69, 0.9);
+}
+
+button {
+  
 }
 
 /* Burger menu */

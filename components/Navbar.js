@@ -84,9 +84,10 @@ const Burger = () => {
   )
 }
 
+
 const Navbar = () => {
   return (
-    <nav className="bg-navbar text-white flex justify-between items-center px-4 h-24">
+    <nav className="bg-navbar text-white flex justify-between items-center px-4 h-24 sticky top-0 z-10">
       <Link href="/" className="self-center">
         <img
           src="images/logo.png"
@@ -98,4 +99,5 @@ const Navbar = () => {
     </nav>
   )
 }
+
 export default Navbar

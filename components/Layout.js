@@ -10,9 +10,9 @@ const Meta = ({ title, description, keywords }) => (
 )
 
 Meta.defaultProps = {
-  title: "Guelagüetzal Restaurant - Built w React",
+  title: "Guelagüetza Restaurant - Built w React",
   keywords: "mexican, tacos, burritos",
-  description: "Fine Mexican food from Guelagüetzal.",
+  description: "Fine Mexican food from Guelagüetza.",
 }
 
 const Layout = ({ title, description, keywords, children, direction }) => {
@@ -36,7 +36,7 @@ const Layout = ({ title, description, keywords, children, direction }) => {
           exit="exit"
           variants={variants}
           transition={{ type: "linear", stiffness: 600, duration: 0.5, delay: 0.1 }}
-          className="flex flex-col gap-12 overflow-x-hidden"
+          className="flex flex-col gap-8 overflow-x-hidden"
         >
           {children}
         </motion.main>
